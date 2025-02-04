@@ -1,0 +1,124 @@
+/* Reseta algumas configurações padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8A2BE2, #D16BA5); /* Gradiente roxo e rosa */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 700px; /* Ajustado para se adequar melhor ao conteúdo */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    overflow: hidden; /* Garante que o conteúdo não saia da área */
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Estilo para os campos de entrada e botões */
+input[type="number"], select {
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background-color: #e0a0d0; /* Rosa claro */
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: #42aaff; /* Azul */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e8cb9; /* Azul escuro */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Seções (Calculadora e Conversor) */
+.calculadora, .conversor {
+    display: none; /* Começa com ambas as seções ocultas */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* Exibe a seção correta com base na escolha do usuário */
+#calculadora.active, #conversor.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilo para a exibição do resultado da conversão */
+#resultadoConversao {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #f0e0a0;
+}
+
+#resultadoCalculadora {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #f0e0a0;
+    color: #f0e0a0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

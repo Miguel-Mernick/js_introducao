@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora e Conversor</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CALCULADORA E CONVERSOR</h1>
+        
+        <!-- Select para alternar entre calculadora e conversor -->
+        <select id="opcao" onchange="alternar()" aria-label="Selecione a ferramenta">
+            <option value="calculadora">Calculadora</option>
+            <option value="conversor">Conversor de Moeda</option>
+        </select>
+
+        <!-- Seção da Calculadora -->
+        <div id="calculadora" class="calculadora">
+            <h2>Calculadora</h2>
+            <input type="number" name="n2" id="n1" placeholder="Insira o primeiro número" required>
+            <br><br>
+            <input type="number" name="n1" id="n2" placeholder="Insira o segundo número" required>
+            <br><br>
+            <button onclick="soma()">+</button>
+            <button onclick="subtracao()">-</button>
+            <button onclick="divisao()">÷</button>
+            <button onclick="multiplicacao()">x</button>
+            <br>
+            <p id="resultadoCalculadora"></p>
+        </div>
+
+        <!-- Seção do Conversor -->
+        <div id="conversor" class="conversor">
+            <h2>Conversor de Moeda</h2>
+            <select id="moeda">
+                <option value="euro">Euro</option>
+                <option value="dolar">Dólar</option>
+                <option value="libra">Libra</option>
+            </select>
+            <br><br>
+            <input type="number" id="valor" placeholder="Insira o valor" required>
+            <br><br>
+            <button onclick="converter()">Converter para Real</button>
+            <br><br>
+            <p id="resultadoConversao"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
